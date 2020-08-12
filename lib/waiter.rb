@@ -17,11 +17,6 @@ attr_accessor :name, :yrs_experience
     Meal.new(self, customer, total, tip)
   end
   
-  def meals
-  Meal.all.select do |meal|
-    meal.customer == self
-  end
-end
 
 def waiters
   meals.map do |meal|
